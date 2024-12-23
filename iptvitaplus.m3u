@@ -7,7 +7,7 @@ http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803&output=7&forc
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718&output=7&forceUserAgent=raiplayappletv
 #EXTINF:-1 tvg-id="Rai3.it" tvg-chno="3" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rai3.png" group-title="Rai",Rai 3
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
-http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709&output=7&forceUserAgent=raiplayappletv
+https://tgrpuglia-live.akamaized.net/hls/live/2025570/tgrpuglia/tgrpuglia/tgrpuglia_1300/chunklist.m3u8
 #EXTINF:-1 tvg-id="Rete4.it" tvg-chno="4" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rete4.png" group-title="Mediaset",Rete 4
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live03-col.msf.cdn.mediaset.net/live/ch-r4/r4-clr.isml/manifest.mpd
@@ -23,6 +23,10 @@ https://d3749synfikwkv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11223/tv8web/master.m3u8?hdnea=st=1701861650~exp=1765449000~acl=/*~hmac=84c9f3f71e57b13c3a67afa8b29a8591ea9ed84bf786524399545d94be1ec04d
 #EXTINF:-1 tvg-id="Nove.it" tvg-chno="9" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/nove.png" group-title="Discovery",NOVE
 https://amg16146-wbdi-amg16146c1-samsung-it-1831.playouts.now.amagi.tv/playlist/amg16146-warnerbrosdiscoveryitalia-nove-samsungit/playlist.m3u8
+#EXTINF:-1 tvg-id="TGNorba24.it" tvg-name="TG Norba 24" tvg-chno="10" tvg-logo="https://i.imgur.com/9MhrrJK.png" group-title="Italy",TG Norba 24
+https://router.xdevel.com/video0s976570-1326/stream/playlist_dvr.m3u8
+#EXTINF:-1 tvg-id="Telesveva.it" tvg-name="Telesveva" tvg-chno="18" tvg-logo="https://i.imgur.com/SCDETZC.jpeg" group-title="Altro",Telesveva
+https://live2.telesveva.com:4443/hls/svevahd.m3u8
 #EXTINF:-1 tvg-id="20Mediaset.it" tvg-chno="20" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/20mediaset.png" group-title="Mediaset",20 Mediaset
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live03-col.msf.cdn.mediaset.net/live/ch-lb/lb-clr.isml/manifest.mpd
@@ -175,3 +179,5 @@ https://live03-col.msr.cdn.mediaset.net/live/ch-bb/bb-clr.isml/manifest.mpd
 https://d2hrvno5bw6tg2.cloudfront.net/smrtv-ch01/_definst_/smil:ch-01.smil/chunklist_b2192000_slita.m3u8
 #EXTINF:-1 tvg-id="RadioTvSerieA.it" tvg-chno="899" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/radiotvseriea.png" group-title="Radio",Radio TV Serie A con RDS
 https://stream.radioseriea.com/50773f0d0070476a8612d9984c6059d8/index.m3u8
+#EXTINF:-1 tvg-id="EuronewsItalian.fr" tvg-chno="900" tvg-name="Euronews Italia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Euronews_2022.svg/640px-Euronews_2022.svg.png" group-title="Altro",Euronews Italia
+https://www.youtube.com/user/euronewsit/live
