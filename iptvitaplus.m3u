@@ -26,7 +26,7 @@ https://amg16146-wbdi-amg16146c1-samsung-it-1831.playouts.now.amagi.tv/playlist/
 #EXTINF:-1 tvg-id="TGNorba24.it" tvg-name="TG Norba 24" tvg-chno="10" tvg-logo="https://i.imgur.com/9MhrrJK.png" group-title="Altro",TG Norba 24
 https://router.xdevel.com/video0s976570-1326/stream/playlist_dvr.m3u8
 #EXTINF:-1 tvg-id="Telesveva.it" tvg-name="Telesveva" tvg-chno="18" tvg-logo="https://i.imgur.com/SCDETZC.jpeg" group-title="Altro",Telesveva
-https://live2.telesveva.com:4443/hls/svevahd.m3u8
+https://live2.telesveva.com:4443/hls/svevahd.m3u8?watchkey=16356b9f
 #EXTINF:-1 tvg-id="20Mediaset.it" tvg-chno="20" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/20mediaset.png" group-title="Mediaset",20 Mediaset
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://live03-col.msf.cdn.mediaset.net/live/ch-lb/lb-clr.isml/manifest.mpd
