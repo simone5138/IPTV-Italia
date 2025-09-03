@@ -23,7 +23,9 @@ https://d3749synfikwkv.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11223/tv8web/master.m3u8?hdnea=st=1701861650~exp=1765449000~acl=/*~hmac=84c9f3f71e57b13c3a67afa8b29a8591ea9ed84bf786524399545d94be1ec04d
 #EXTINF:-1 tvg-id="Nove" tvg-chno="9" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/nove.png" group-title="Discovery",NOVE
 https://jmp2.uk/stvp-IT9000060Q
-#EXTINF:-1 tvg-id="TGNorba24.it" tvg-name="TG Norba 24" tvg-chno="10" tvg-logo="https://i.imgur.com/9MhrrJK.png" group-title="Altro",TG Norba 24
+#EXTINF:-1 tvg-id="tele-norba" tvg-name="Tele Norba" tvg-chno="10" tvg-shift="" tvg-logo="https://portiamovalore.uniba.it/uploads/loghi/Logo%20telenorba_1579780216.png" group-title="Altro", Tele Norba
+https://stream12.xdevel.com/video2s976570-2526/stream/chunks_dvr.m3u8
+#EXTINF:-1 tvg-id="TGNorba24.it" tvg-name="TG Norba 24" tvg-chno="11" tvg-logo="https://i.imgur.com/9MhrrJK.png" group-title="Altro",TG Norba 24
 https://router.xdevel.com/video0s976570-1326/stream/playlist_dvr.m3u8
 #EXTINF:-1 tvg-id="AntennaSud.it" tvg-name="Antenna Sud" tvg-chno="14" tvg-logo="https://www.antennasud.com/wp-content/uploads/2022/04/quadrati_loghi_14.png" group-title="Altro",Antenna Sud
 https://live.antennasudwebtv.it:9443/hls/vod.m3u8
