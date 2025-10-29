@@ -161,7 +161,7 @@ https://600f07e114306.streamlock.net/PadrePioTV/livestream/playlist.m3u8
 https://kk.fluid.stream/KKMulti/smil:KissKissTV.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="RaiRadio2.it" tvg-chno="202" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rairadio2visual.png" group-title="Radio",Rai Radio 2 Visual
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
-http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=5674080&output=7&forceUserAgent=raiplayappletv
+https://visualradiodue3-live.akamaized.net/hls/live/2034078/visualradiodue3/visualradiodue3/playlist.m3u8
 #EXTINF:-1 tvg-id="RTL102.5News.it" tvg-chno="233" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rtl1025tv.png" group-title="Radio",RTL 102.5 News
 https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S38122967/2lyQRIAAGgRR/playlist_video.m3u8
 #EXTINF:-1 tvg-id="VirginRadio.it" tvg-chno="257" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/virginradiotv.png" group-title="Radio",VIRGIN RADIO
@@ -190,5 +190,5 @@ https://d2hrvno5bw6tg2.cloudfront.net/smrtv-ch01/_definst_/smil:ch-01.smil/chunk
 #EXTINF:-1 tvg-id="RadioTvSerieA.it" tvg-chno="899" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/radiotvseriea.png" group-title="Radio",Radio TV Serie A con RDS
 https://stream.radioseriea.com/50773f0d0070476a8612d9984c6059d8/index.m3u8
 #EXTINF:-1 tvg-id="EuronewsItalian.fr" tvg-chno="900" tvg-name="Euronews Italia" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Euronews_2022.svg/640px-Euronews_2022.svg.png" group-title="Altro",Euronews Italia
-https://www.youtube.com/user/euronewsit/live
+https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1761770825/ei/6SgCaaz9EID4ut0PiOejwAY/ip/169.155.232.197/id/pUcmpyynASM.3/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/hfr/1/maxh/4320/playlist_duration/30/manifest_duration/30/maudio/1/siu/1/bui/AdEuB5TsrIj2LTRLaDLVFPCj74jLcvsQ8tkndM_vU4qWAxrd_bT23QS-Y3au7oqdOO9x_sLYAg/spc/6b0G_AAGDFB-WxuG7rInJQBSsFznF-Yg29Ixf0iyK-vvCj5evM-6/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/ncsapi/1/keepalive/yes/fexp/51355912%2C51514993%2C51552689%2C51565115%2C51565682%2C51580968/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Chfr%2Cmaxh%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Csiu%2Cbui%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhALdKA0i0bhxfUMb7DMcfbC1weUGAblkdygmHsvZoU_RyAiAHARVXLHer76M8NFvIgeObj4SR2W17fN6Zh3aeomITkg%3D%3D/file/index.m3u8
 
