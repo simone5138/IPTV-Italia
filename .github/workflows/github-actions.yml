@@ -1,0 +1,14 @@
+name: Github actions test
+on: [push]
+jobs:
+  Explore-Github-Actions:
+  runs-on: ubuntu-latest
+  steps:
+    - run: echo "some test to see if it works, will change it later"
+    - name: Check out repository code
+    uses: actions/checkout@v2
+    - run: echo "The ${{ github.repository }} repository has been cloned to the runner"
+    - name: List files in the repository
+    - run: |
+      ls ${{ github.workspace }}
+    - run: echo "this job's status is ${{ job.status }}"
