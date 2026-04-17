@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://tvit.leicaflorianrobert.dev/epg/list.xml"
+#EXTM3U url-tvg="https://raw.githubusercontent.com/simone5138/IPTV-Italia/refs/heads/main/epg.xml"
 #EXTINF:-1 tvg-id="Rai 1" tvg-chno="1" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rai1.png" group-title="Rai",Rai 1
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://ilglobotv-live.akamaized.net/channels/RAI1/Live.m3u8#92113c49b96bf0ff06e603f6988567d106eebcd6d5af051f082784664131ccc0
