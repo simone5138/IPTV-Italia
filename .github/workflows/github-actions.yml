@@ -1,14 +1,139 @@
-name: Github actions test
-on: [push]
+name: Generate XMLTV EPG
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
 jobs:
-  Explore-Github-Actions:
-  runs-on: ubuntu-latest
-  steps:
-    - run: echo "some test to see if it works, will change it later"
-    - name: Check out repository code
-    uses: actions/checkout@v2
-    - run: echo "The ${{ github.repository }} repository has been cloned to the runner"
-    - name: List files in the repository
-    - run: |
-      ls ${{ github.workspace }}
-    - run: echo "this job's status is ${{ job.status }}"
+  build-epg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Download JSON
+        run: |
+          curl -L "https://epg.zappr.stream/it/dtt/national.json" -o input.json
+
+      - name: Convert JSON to XMLTV
+        run: |
+          python3 <<'PY'
+          import json
+          from datetime import datetime
+          from xml.etree.ElementTree import Element, SubElement, ElementTree
+
+          INPUT_FILE = "input.json"
+          OUTPUT_FILE = "epg.xml"
+
+          def format_xmltv_datetime(iso_string: str) -> str:
+              dt = datetime.fromisoformat(iso_string)
+              return dt.strftime("%Y%m%d%H%M%S %z")
+
+          def add_text_element(parent, tag, text, lang="it"):
+              if text is not None and str(text).strip() != "":
+                  el = SubElement(parent, tag)
+                  el.set("lang", lang)
+                  el.text = str(text)
+                  return el
+              return None
+
+          with open(INPUT_FILE, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          if not isinstance(data, dict) or not data:
+              raise RuntimeError("JSON root non valido o vuoto")
+
+          tv = Element("tv")
+          tv.set("generator-info-name", "GitHub Actions JSON to XMLTV")
+          tv.set("generator-info-url", "https://github.com")
+
+          created_channels = set()
+
+          # data = { provider: { channel_id: [programmes...] } }
+          for provider_name, provider_channels in data.items():
+              if not isinstance(provider_channels, dict):
+                  continue
+
+              for channel_id, programmes in provider_channels.items():
+                  xml_channel_id = f"{provider_name}.{channel_id}"
+
+                  if xml_channel_id not in created_channels:
+                      channel = SubElement(tv, "channel")
+                      channel.set("id", xml_channel_id)
+
+                      display_name = SubElement(channel, "display-name")
+                      display_name.set("lang", "it")
+                      display_name.text = str(channel_id)
+
+                      created_channels.add(xml_channel_id)
+
+                  if not isinstance(programmes, list):
+                      continue
+
+                  for item in programmes:
+                      if not isinstance(item, dict):
+                          continue
+
+                      name = item.get("name")
+                      start_iso = item.get("startTime", {}).get("iso")
+                      stop_iso = item.get("endTime", {}).get("iso")
+
+                      if not name or not start_iso or not stop_iso:
+                          continue
+
+                      programme = SubElement(tv, "programme")
+                      programme.set("channel", xml_channel_id)
+                      programme.set("start", format_xmltv_datetime(start_iso))
+                      programme.set("stop", format_xmltv_datetime(stop_iso))
+
+                      add_text_element(programme, "title", name)
+                      add_text_element(programme, "sub-title", item.get("subtitle"))
+                      add_text_element(programme, "desc", item.get("description"))
+
+                      season = item.get("season")
+                      episode = item.get("episode")
+
+                      if season or episode:
+                          ep = SubElement(programme, "episode-num")
+                          ep.set("system", "onscreen")
+                          if season and episode:
+                              ep.text = f"S{season} E{episode}"
+                          elif season:
+                              ep.text = f"Season {season}"
+                          else:
+                              ep.text = f"Episode {episode}"
+
+                      image = item.get("image")
+                      if image:
+                          icon = SubElement(programme, "icon")
+                          icon.set("src", image)
+
+                      link = item.get("link")
+                      if link:
+                          url = SubElement(programme, "url")
+                          url.text = link
+
+          tree = ElementTree(tv)
+          tree.write(OUTPUT_FILE, encoding="utf-8", xml_declaration=True)
+
+          print(f"Creato {OUTPUT_FILE}")
+          PY
+
+      - name: Validate XML
+        run: |
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          ET.parse("epg.xml")
+          print("XML valido")
+          PY
+
+      - name: Commit updated EPG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add epg.xml
+          git diff --cached --quiet && echo "Nessuna modifica" && exit 0
+          git commit -m "Update EPG"
+          git push
