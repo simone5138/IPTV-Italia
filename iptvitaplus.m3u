@@ -4,7 +4,7 @@
 https://ilglobotv-live.akamaized.net/channels/RAI1/Live.m3u8#92113c49b96bf0ff06e603f6988567d106eebcd6d5af051f082784664131ccc0
 #EXTINF:-1 tvg-id="raiplay.rai-2" tvg-chno="2" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rai2.png" group-title="Rai",Rai 2
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
-https://viamotionhsi.netplus.ch/live/eds/rai2/browser-HLS8/rai2.m3u8
+https://rai.zappr.stream/rai2.m3u8
 #EXTINF:-1 tvg-id="raiplay.rai-3" tvg-chno="3" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/rai3.png" group-title="Rai",Rai 3
 #EXTVLCOPT:http-user-agent=HbbTV/1.6.1
 https://dash2.antik.sk/live/test_rai_tre_tizen/playlist.m3u8
