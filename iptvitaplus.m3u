@@ -22,7 +22,7 @@ https://d1chghleocc9sm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68
 #EXTINF:-1 tvg-id="blue.266" tvg-chno="8" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/tv8.png" group-title="Sky",TV8
 https://hlslive-web-gcdn-skycdn-it.akamaized.net/TACT/11223/tv8web/master.m3u8?hdnts=st=1775736615~exp=1775736915~acl=/*~hmac=2eafb983d8b3a2b41ad5910aaf371c2a3b50ae349b4e69b13fb759b230bc4558
 #EXTINF:-1 tvg-id="blue.118" tvg-chno="9" tvg-logo="https://cdn.jsdelivr.net/gh/Tundrak/IPTV-Italia/logos/nove.png" group-title="Discovery",NOVE
-https://jmp2.uk/stvp-IT9000060Q
+https://ok.ru/videoembed/14476072328790
 #EXTINF:-1 tvg-id="tele-norba" tvg-name="Tele Norba" tvg-chno="10" tvg-shift="" tvg-logo="https://portiamovalore.uniba.it/uploads/loghi/Logo%20telenorba_1579780216.png" group-title="Altro", Tele Norba
 https://live-telenorba.cdn.netrw.it/telenorba/hls/ccr/telenorba/master.m3u8?start=now&end=now
 #EXTINF:-1 tvg-id="TGNorba24.it" tvg-name="TG Norba 24" tvg-chno="11" tvg-logo="https://i.imgur.com/9MhrrJK.png" group-title="Altro",TG Norba 24
